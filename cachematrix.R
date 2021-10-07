@@ -1,18 +1,18 @@
-## A matrix that cache its inverse
+## The function caches the inverse of the matrix
 
-CacheInverse <- function(x = y() ) {
+CacheInverse <- function( x = y() ) {
         a <- NULL
         make <- function( y ) {
                 x <<- y
                 a <<- NULL
                 }
-        take <- function() {
+        take <- function( ) {
                 x
                 }
-        makeInverse <- function(inverse) {
+        makeInverse <- function( inverse ) {
                 a <-inverse
                 }
-        takeInverse <- function() {
+        takeInverse <- function( ) {
                 a
                 }
         list(set = set,
@@ -23,17 +23,17 @@ CacheInverse <- function(x = y() ) {
 }
 
 
-## Compute the inverse of the matrix from the previous function
+## The function computes the inverse of the matrix from the previous function
 
-cacheSolve <- function(x, ...) {
+cacheMean <- function( x, ... ) {
         ## Return a matrix that is the inverse of 'x'
-        x <- x$getInverse()
+        x <- x$getInverse( )
         if ( !is.null(x) ) {
                 message("getting inverse data")
-                return(x)
+                return( x )
                 }
-        data <- x$get()
-        x <- solve(data) %*% data
-        x$setInverse(x)
+        data <- x$get( )
+        x <- solve( data ) %*% data
+        x$setInverse( x )
         x
 }
