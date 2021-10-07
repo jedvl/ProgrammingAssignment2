@@ -27,7 +27,7 @@ CacheInverse <- function( x = y() ) {
 
 cacheMean <- function( x, ... ) {
         ## Return a matrix that is the inverse of 'x'
-        x <- x$getInverse( )
+        x <- x$getMean( )
         if ( !is.null(x) ) {
                 message("getting inverse data")
                 return( x )
