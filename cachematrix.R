@@ -34,6 +34,6 @@ cacheMean <- function( x, ... ) {
                 }
         data <- x$get( )
         x <- solve( data ) %*% data
-        x$setInverse( x )
+        x$setMean( x )
         x
 }
