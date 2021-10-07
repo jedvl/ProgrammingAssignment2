@@ -1,18 +1,18 @@
 ## A matrix that cache its inverse
 
-makeCacheMatrix <- function(x = y() ) {
+CacheInverse <- function(x = y() ) {
         a <- NULL
-        set <- function( y ) {
+        make <- function( y ) {
                 x <<- y
                 a <<- NULL
                 }
-        get <- function() {
+        take <- function() {
                 x
                 }
-        setInverse <- function(inverse) {
+        makeInverse <- function(inverse) {
                 a <-inverse
                 }
-        getInverse <- function() {
+        takeInverse <- function() {
                 a
                 }
         list(set = set,
